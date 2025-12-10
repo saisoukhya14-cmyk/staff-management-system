@@ -1,7 +1,7 @@
 
 $headers = @{
-    "apikey" = $env:SUPABASE_ANON_KEY
-    "Authorization" = "Bearer $($env:SUPABASE_SERVICE_ROLE_KEY)"
+    "apikey" = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImN3YWF5ZHVib2lrcWloZW1wZ2JuIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc2NTE3MjUwMywiZXhwIjoyMDgwNzQ4NTAzfQ.iaPdMFa-zDSnL-uXhTWProXYgRtABgWy7jOGlxye-lE"
+    "Authorization" = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImN3YWF5ZHVib2lrcWloZW1wZ2JuIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc2NTE3MjUwMywiZXhwIjoyMDgwNzQ4NTAzfQ.iaPdMFa-zDSnL-uXhTWProXYgRtABgWy7jOGlxye-lE"
 }
 
 
