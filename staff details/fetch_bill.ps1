@@ -1,7 +1,7 @@
 
 $headers = @{
-    "apikey" = "sb_secret_AdHTy_CVyS4HJiYTOnk9QQ_PL8Q0y-O"
-    "Authorization" = "sb_secret_AdHTy_CVyS4HJiYTOnk9QQ_PL8Q0y-O"
+    "apikey" = "sb_secret_kA5x9WhBtTZRaytdD8EJdw_1vpM0Rof"
+    "Authorization" = "Bearer sb_secret_kA5x9WhBtTZRaytdD8EJdw_1vpM0Rof"
 }
 
 
