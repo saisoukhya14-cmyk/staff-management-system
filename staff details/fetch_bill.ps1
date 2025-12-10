@@ -1,8 +1,9 @@
 
 $headers = @{
-    "apikey" = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImN3YWF5ZHVib2lrcWloZW1wZ2JuIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjUxNzI1MDMsImV4cCI6MjA4MDc0ODUwM30.mZULa8vhq_o4a6J631he9PCJy_iTwm2vhMWFtJ4AoCE"
-    "Authorization" = "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImN3YWF5ZHVib2lrcWloZW1wZ2JuIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjUxNzI1MDMsImV4cCI6MjA4MDc0ODUwM30.mZULa8vhq_o4a6J631he9PCJy_iTwm2vhMWFtJ4AoCE"
+    "apikey" = $env:SUPABASE_ANON_KEY
+    "Authorization" = "Bearer $($env:SUPABASE_SERVICE_ROLE_KEY)"
 }
+
 
 $bill = Invoke-RestMethod -Uri "https://cwaayduboikqihempgbn.supabase.co/rest/v1/bills?select=id,created_at&order=created_at.desc&limit=1" -Headers $headers -Method Get
 
