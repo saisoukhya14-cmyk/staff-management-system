@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Bill - Staff Details</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div
+            style="display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto;">
+            <h1>📄 Upload Bill</h1>
+            <div class="nav-links">
+                <a href="bills.html" class="nav-link">🧾 All Bills</a>
+                <a href="index.html" class="nav-link">← Dashboard</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div id="error-container"></div>
+
+        <div class="upload-section">
+            <div class="upload-card">
+                <h2>Upload Bill Document</h2>
+                <p class="upload-description">Upload a bill (image or PDF) to automatically extract invoice details</p>
+
+                <div class="file-upload-area" id="file-upload-area">
+                    <input type="file" id="file-input" accept="image/*,.pdf" hidden>
+                    <div class="upload-icon">📁</div>
+                    <p class="upload-text">Click to select or drag and drop</p>
+                    <p class="upload-hint">Supports: JPG, PNG, PDF (Max 10MB)</p>
+                </div>
+
+                <div id="file-preview" class="file-preview" style="display: none;">
+                    <div class="preview-info">
+                        <span class="file-icon">📄</span>
+                        <div class="file-details">
+                            <p class="file-name" id="file-name"></p>
+                            <p class="file-size" id="file-size"></p>
+                        </div>
+                        <button class="remove-file-btn" id="remove-file-btn">✕</button>
+                    </div>
+                </div>
+
+                <button id="upload-btn" class="upload-btn" disabled>
+                    <span id="upload-btn-text">Upload & Process</span>
+                    <span id="upload-spinner" class="spinner" style="display: none;"></span>
+                </button>
+
+                <div id="progress-container" class="progress-container" style="display: none;">
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progress-fill"></div>
+                    </div>
+                    <p class="progress-text" id="progress-text">Uploading...</p>
+                </div>
+
+                <div id="result-container" class="result-container" style="display: none;">
+                    <div class="result-success">
+                        <div class="success-icon">✓</div>
+                        <h3>Bill Processed Successfully!</h3>
+                        <p id="result-message"></p>
+                        <button class="secondary-btn" onclick="window.location.reload()">Upload Another Bill</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="info-card">
+                <h3>📋 What gets extracted?</h3>
+                <ul class="info-list">
+                    <li><strong>Invoice Details:</strong> Number, Date, GST Number</li>
+                    <li><strong>Customer Info:</strong> Name, Place of Service/Supply</li>
+                    <li><strong>Vehicle:</strong> Vehicle Number</li>
+                    <li><strong>Amounts:</strong> Subtotal, Grand Total</li>
+                    <li><strong>Line Items:</strong> Item code, HSN, Quantity, Price, Tax, etc.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="config.js"></script>
+    <script type="module" src="uploadBill.js"></script>
+</body>
+
+</html>

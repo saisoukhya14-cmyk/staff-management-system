@@ -1,0 +1,214 @@
+/* =========================================
+   BILLS DASHBOARD STYLES (NEW)
+   ========================================= */
+
+.table-container {
+    overflow-x: auto;
+    background: var(--card-bg);
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    margin-top: 1rem;
+}
+
+.bills-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 600px;
+}
+
+.bills-table th {
+    background-color: rgba(255, 255, 255, 0.08);
+    color: var(--accent-blue);
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 0.05em;
+    padding: 16px 20px;
+    text-align: left;
+    border-bottom: 2px solid var(--border-color);
+}
+
+.bills-table td {
+    padding: 16px 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    color: var(--text-primary);
+    font-size: 0.95rem;
+    vertical-align: middle;
+}
+
+.bills-table tr:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.02);
+}
+
+.bills-table tr:hover {
+    background-color: rgba(56, 189, 248, 0.1);
+}
+
+.action-btn {
+    padding: 8px 14px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-right: 8px;
+    transition: all 0.2s ease;
+}
+
+.view-btn {
+    background-color: rgba(56, 189, 248, 0.15);
+    color: #38bdf8;
+    border: 1px solid rgba(56, 189, 248, 0.3);
+}
+
+.view-btn:hover {
+    background-color: #38bdf8;
+    color: white;
+}
+
+.delete-btn {
+    background-color: rgba(239, 68, 68, 0.15);
+    color: #f87171;
+    border: 1px solid rgba(239, 68, 68, 0.3);
+}
+
+.delete-btn:hover {
+    background-color: #ef4444;
+    color: white;
+}
+
+/* =========================================
+   MODAL & DETAILS STYLES
+   ========================================= */
+
+.detail-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    background: rgba(255, 255, 255, 0.03);
+    padding: 24px;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    margin-bottom: 30px;
+}
+
+.detail-item label {
+    display: block;
+    color: var(--text-secondary);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 6px;
+}
+
+.detail-item span {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--text-primary);
+}
+
+/* Line Items Table with Fixed Widths (8 Columns) */
+.items-table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow: hidden;
+    table-layout: fixed;
+    min-width: 900px;
+}
+
+.items-table th {
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 12px 10px;
+    text-align: left;
+    font-weight: 600;
+    color: var(--text-secondary);
+    border-bottom: 1px solid var(--border-color);
+    white-space: nowrap;
+    font-size: 0.85rem;
+}
+
+/* Specific Column Widths */
+.items-table th:nth-child(1) {
+    width: 40px;
+}
+
+/* # */
+.items-table th:nth-child(2) {
+    width: 250px;
+}
+
+/* Item (Wide) */
+.items-table th:nth-child(3) {
+    width: 90px;
+}
+
+/* HSN */
+.items-table th:nth-child(4) {
+    width: 60px;
+    text-align: center;
+}
+
+/* Qty */
+.items-table th:nth-child(5) {
+    width: 90px;
+    text-align: right;
+}
+
+/* Rate */
+.items-table th:nth-child(6) {
+    width: 100px;
+    text-align: right;
+}
+
+/* Taxable */
+.items-table th:nth-child(7) {
+    width: 90px;
+    text-align: right;
+}
+
+/* Tax */
+.items-table th:nth-child(8) {
+    width: 110px;
+    text-align: right;
+}
+
+/* Total */
+
+.items-table td {
+    padding: 12px 10px;
+    border-bottom: 1px solid var(--border-color);
+    color: var(--text-primary);
+    vertical-align: top;
+    font-size: 0.9rem;
+    word-wrap: break-word;
+}
+
+/* Align numeric columns bodies */
+.items-table td:nth-child(4) {
+    text-align: center;
+}
+
+.items-table td:nth-child(5) {
+    text-align: right;
+}
+
+.items-table td:nth-child(6) {
+    text-align: right;
+}
+
+.items-table td:nth-child(7) {
+    text-align: right;
+}
+
+.items-table td:nth-child(8) {
+    text-align: right;
+}
+
+@media (max-width: 600px) {
+    .detail-grid {
+        grid-template-columns: 1fr;
+    }
+}

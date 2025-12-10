@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Bills - Staff Details</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="bills.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div
+            style="display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto;">
+            <h1>🧾 All Bills</h1>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="uploadBill.html" class="nav-link">Upload New</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div id="error-container"></div>
+
+        <div class="card">
+            <div class="card-header"
+                style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                <h2>Uploaded Invoices</h2>
+                <div class="search-box">
+                    <input type="text" id="search-input" placeholder="Search invoices..."
+                        style="padding: 8px; border-radius: 6px; border: 1px solid var(--border-color);">
+                </div>
+            </div>
+
+            <div class="table-container">
+                <table class="bills-table" style="width: 100%; border-collapse: collapse;">
+                    <thead>
+                        <tr style="border-bottom: 2px solid var(--border-color); text-align: left;">
+                            <th style="padding: 12px;">Date</th>
+                            <th style="padding: 12px;">Invoice #</th>
+                            <th style="padding: 12px;">Customer</th>
+                            <th style="padding: 12px;">Vehicle</th>
+                            <th style="padding: 12px;">Total</th>
+                            <th style="padding: 12px;">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="bills-table-body">
+                        <!-- Bills will be inserted here -->
+                        <tr>
+                            <td colspan="6" style="text-align: center; padding: 20px;">Loading bills...</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bill Details Modal -->
+    <dialog id="details-modal" class="modal" style="max-width: 800px; width: 90%;">
+        <div class="modal-header">
+            <h2 id="modal-title">Invoice Details</h2>
+            <button id="close-modal" class="close-btn">&times;</button>
+        </div>
+        <div class="modal-content" id="modal-content">
+            <!-- Details will be injected here -->
+        </div>
+    </dialog>
+
+    <script src="config.js"></script>
+    <script type="module" src="bills.js"></script>
+</body>
+
+</html>
